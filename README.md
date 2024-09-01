@@ -17,7 +17,8 @@ The whole process starts with analysis of NMOS and PMOS devices, specifically th
   ### 1.1 General MOS Analysis
 In this section I start with the analysis of MOSFET models present in sky130 pdk. I am using the 1.8v transistor models to experiment among many other ones present there. Below is the schematic I created in Xschem.
 
-efewfevf
+![nmos_sch](https://github.com/user-attachments/assets/365c4782-1730-403f-ae31-a0599033acc6)
+
 
 The components used are:<br>
 ```nfet_01v8.sym``` - from xschem_sky130 library<br>
@@ -30,5 +31,14 @@ I used the above to plot the basic characteristic plots for an NMOS Transistor, 
 _after this choose a plot by typing '''setplot <plot_name>'''. for example '''setplot tran1'''_<br>
 ```plot``` - to choose the vector to plot.<br>
 _example : plot -vds#branch_<br><br>
+
+Then you must see the plot below you, if you did a DC sweep on the __VGS__ source for different values of __VDS__:<br>
+![collage2](https://github.com/user-attachments/assets/4793cf79-5013-4d8b-8a6a-ea1fea47e1de)
+
+This definitely shows us that the threshold value is between __600mV to 700mV__ and I think I will be using ___650mV___ for my future calculations.
+Similarly, when I sweep __VDS__ source for different values of __VGS__, I get the below plot:<br>
+![plot_(-vds#branch)](https://github.com/user-attachments/assets/49cc6595-46c7-4379-bd82-071aea05e423)
+
+
 
   

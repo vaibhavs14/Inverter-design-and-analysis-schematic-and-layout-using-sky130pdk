@@ -44,16 +44,17 @@ Same can be done for a ___PMOS___. Motive is same, but expecially to extract the
 
 ### 2.2 Strong 0 and Weak 1
 What does the above mean? Look at the graph below,<br><br>
-....
-....
+![pdn_nmos_sch](https://github.com/user-attachments/assets/a278ef30-d510-419e-b19b-9ebe7b9b62bd)
+![collage3](https://github.com/user-attachments/assets/074a4b1a-591a-4d44-873a-f4512fa5d3b6)
 
 
 You can see that, when a square wave is applied to the input of NMOS, when it is __LOW(0V)__, the output goes to __HIGH(1.8V)__. But when the input is __HIGH(1.8V)__, the output goes to a value that is much larger than 0V. This is due to the fact that when Vgs is 1.8V, the NMOS is in linear region. This is where the MOSFET acts as a voltage controlled resistor. At this point, the output is connected to a Voltage Divider Configuration. That is the output takes the value which is defined by the voltage across the resistance of the mosfet. Hence, ___NMOS is able to transmit STRONG 0, but not a STRONG 1. So NMOS is Strong 0 but a Weak 1___<br><br>
 
 ### 2.3 Weak 0 and Strong 1
 Again, some plots will clear the idea<br><br>
-...
-...
+
+![pun_pmos_sch](https://github.com/user-attachments/assets/3a425043-315d-43a4-b33d-9eab575a0696)
+![collage4](https://github.com/user-attachments/assets/2a8cf4fc-abec-4c30-82fb-321c092e31e0)
 
 The reasoning is the same as the previous section<br><br>
 

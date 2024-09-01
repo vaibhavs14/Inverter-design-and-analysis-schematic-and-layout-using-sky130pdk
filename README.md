@@ -87,7 +87,7 @@ A lot of calculations will now start from this point. Similar to how we analysed
 #### 2.3 DC Analysis and Important design parameters
 
 DC analysis would be used to plot a Voltage Transfer Characteristics (VTC) curve for the circuit. It will sweep the value of Vin from high to low to determine the  working of circuit with respect to different voltage levels in the input. The following plot is observed when simulated :<br>
-...image...
+![collage6](https://github.com/user-attachments/assets/acdab38e-ef5d-471a-9b26-ff35f5765dfa)
 
 A voltage transfer characteristics paints a plot that shows the behavior of a device when it's input is changed(full swing). It shows what happens to the output as input changes. In our case, for an inverter we can see a plot that is like a square wave(non ideal), that changes it's nature around 0.89 volts of input. So one can say that there are like 3 regions in the VTC curve, the portion where output is high, the place of transistion and the one where the output goes low. But actually there are __five regions of operation__ and they are based on the working of inverter constituents, that is the NMOS and the PMOS transistors with respect to the change in the input potential. <br>
 ![inverter-operating-regions](https://github.com/user-attachments/assets/452c2e50-32f0-4867-b923-a8dc34be2641)

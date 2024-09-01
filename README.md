@@ -33,14 +33,17 @@ _after this choose a plot by typing '''setplot <plot_name>'''. for example '''se
 _example : plot -vds#branch_<br><br>
 
 Then you must see the plot below you, if you did a DC sweep on the __VGS__ source for different values of __VDS__:<br>
+
 ![collage2](https://github.com/user-attachments/assets/4793cf79-5013-4d8b-8a6a-ea1fea47e1de)
 
 This definitely shows us that the threshold value is between __600mV to 700mV__ and I think I will be using ___650mV___ for my future calculations.
 Similarly, when I sweep __VDS__ source for different values of __VGS__, I get the below plot:<br>
+
 ![plot_(-vds#branch)](https://github.com/user-attachments/assets/49cc6595-46c7-4379-bd82-071aea05e423)
 
 Same can be done for a ___PMOS___. Motive is same, but expecially to extract the value of Aspect ratio for which the current is the same in both NMOS and PMOS. I have done some experimentation and found that at __W/L of PMOS__ = __3.5 * (Aspect ratio of NMOS)1__, the current value is pretty close. So, we found the NMOS had a current of __317 microamps__ while PMOS has the current of __322 microamps__ (both at |Vgs| = 1.8V). So the difference is 5 microamps apart.
 
+![pmos_collage](https://github.com/user-attachments/assets/09fb4c92-b075-481a-b774-5ea7c7de7128)
 
 ### 1.2 Strong 0 and Weak 1
 What does the above mean? Look at the graph below,<br><br>

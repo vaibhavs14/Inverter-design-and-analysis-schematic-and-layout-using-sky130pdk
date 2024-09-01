@@ -39,6 +39,28 @@ This definitely shows us that the threshold value is between __600mV to 700mV__ 
 Similarly, when I sweep __VDS__ source for different values of __VGS__, I get the below plot:<br>
 ![plot_(-vds#branch)](https://github.com/user-attachments/assets/49cc6595-46c7-4379-bd82-071aea05e423)
 
+Same can be done for a ___PMOS___. Motive is same, but expecially to extract the value of Aspect ratio for which the current is the same in both NMOS and PMOS. I have done some experimentation and found that at __W/L of PMOS__ = __3.5 * (Aspect ratio of NMOS)1__, the current value is pretty close. So, we found the NMOS had a current of __317 microamps__ while PMOS has the current of __322 microamps__ (both at |Vgs| = 1.8V). So the difference is 5 microamps apart.
 
+
+### 2.2 Strong 0 and Weak 1
+What does the above mean? Look at the graph below,<br><br>
+....
+....
+
+
+You can see that, when a square wave is applied to the input of NMOS, when it is __LOW(0V)__, the output goes to __HIGH(1.8V)__. But when the input is __HIGH(1.8V)__, the output goes to a value that is much larger than 0V. This is due to the fact that when Vgs is 1.8V, the NMOS is in linear region. This is where the MOSFET acts as a voltage controlled resistor. At this point, the output is connected to a Voltage Divider Configuration. That is the output takes the value which is defined by the voltage across the resistance of the mosfet. Hence, ___NMOS is able to transmit STRONG 0, but not a STRONG 1. So NMOS is Strong 0 but a Weak 1___<br><br>
+
+### 2.3 Weak 0 and Strong 1
+Again, some plots will clear the idea<br><br>
+...
+...
+
+The reasoning is the same as the previous section<br><br>
+
+---Hence, neither NMOS nor PMOS would make a great inverter on their own. So a plethora of configurations were taken into account, but at the last, only one stands as the most popular format of circuit design using mosfets. It is referred to as a CMOS configuration___
+
+---
+
+## 3. CMOS Inverter Design and Analysis
 
   

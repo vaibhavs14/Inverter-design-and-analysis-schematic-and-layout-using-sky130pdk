@@ -105,3 +105,15 @@ One can solve for them using the equations for individual transistors. There are
 
 Above five parameters are critical for an Inverter and can be seen on the __VTC__ curve of an inverter. One thing to point out now would be,
 <p align=center><i><b>Vth should be at a value of VDD/2 for maximum noise margins</b></i></p>  
+
+Let's calculate gain for our circuit. Gain is ratio of the change in output voltage to the change in input voltage **Gain= _d_ Vout/_d_ Vin**. High gain makes the inverter less susceptible to **noise** and helps achieve faster switching times.
+Noise Margin is a measure of a digital circuit's ability to tolerate noise or interference without causing errors in its output. It's essentially the difference between the minimum input voltage required to guarantee a high output and the maximum input voltage that will still produce a low output.
+Here is the plot of of gain when it crosses 1.
+![gain](https://github.com/user-attachments/assets/18234c32-1e76-4009-8f4c-d3a79d9ef9d2)
+
+__VOH__ and __VOL__ are easy to determine as they are your aboslute values. In our case it is __1.8V__ and __0V__ respectively. For __Vih__ and __Vil__, we have another method. At __Vin__ = __VIH__, NMOS is in Saturation region and PMOS in Linear; while when __Vin__ = __VIL__, NMOS is in Linear and PMOS in Saturation. Another interesting thing about these points is that, _these are the points on the curve, when the magnitude of slope = 1_. So we can use ```measure``` commands to find them on the plot. In the plot shown below, look at the points that are at the intersection of the vout curve and the blue vertical line. These are our __VIH__ and __VIL__.<br>
+
+![gain_vout_vin](https://github.com/user-attachments/assets/e77c1ddc-88e8-4632-a043-58a732684090)
+
+And to calculate them, we use ```.meas``` statement with apt instructions. The result is down below.<br>
+![meas_vil_vih](https://github.com/user-attachments/assets/87997776-2747-4135-ac99-cae3f72dc025)

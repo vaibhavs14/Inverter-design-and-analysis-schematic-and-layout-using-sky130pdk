@@ -153,5 +153,17 @@ Now let's calculate the Propagation delay and its associated parameters such as 
 
 Let's calculate all parameters associated from the circuit that we have designed. We will also add an load to the circuit to determine the delay of the signals as the type of load used will also affect the delay of the circuit. We are using an **(0.2pF)** capacitor at the output. Large the load the delay time will also be high.
 
-![inverter_with_CL](https://github.com/user-attachments/assets/1e3392fe-4bd2-4ed4-ac52-baf48fbc3459)
+![collage8](https://github.com/user-attachments/assets/f4eb1a51-a288-4db8-aac9-e39dd1d8cca4)
 
+
+Below are the measurements of the differents parameters of the delay as calculated with Ngspice tool:
+![collage7](https://github.com/user-attachments/assets/b11cf5cc-e14e-44d0-b8a9-f388ce456bc4)
+
+| Delays  | Values |
+|---------|------- |
+|  tpHL   | 0.41ns |
+|  tpLH   | 0.31ns |
+|   tr    | 0.59ns |
+|   tf    | 0.68ns |
+
+#### 2.4 Power Analysis

@@ -140,7 +140,18 @@ Now, they aren't equal. But if we were to take some more effort to get the value
 
 #### 2.3.2 Propagation delay
 
-**Propagation Delay** is the time it takes for a signal to travel from the input of a logic gate to its output. It's a crucial factor in determining the overall speed and performance of a digital circuit.
+Now let's calculate the Propagation delay and its associated parameters such as tpHL,tpLH, tf and tr. **Propagation Delay** is the time it takes for a signal to travel from the input of a logic gate to its output. It's a crucial factor in determining the overall speed and performance of a digital circuit.
 
 ![propagation_delay](https://github.com/user-attachments/assets/544950c5-9668-4144-a51a-7e06198a7c58)
+
+**tpHL (Propagation Delay from High to Low)** is the timke taken for the output of a gate to transition from a high state to a low state after a change in input from low to high. It can be measured from 50% of the input rising signal to the 50% of the output falling signal.
+
+**tpLH (Propagation Delay from Low to High)** is the time taken for the output of a gate to transition from a low state to a high state after a change in input from high to low. It can be measured from 50% of the input falling signal to the 50% of the output rising signal.
+
+**tf (Fall Time)** is the time it takes for the output of a gate to transition from 90% of its high state to 10% of its high state. 
+**tf (Rise Time)** is the time it takes for the output of a gate to transition from 10% of its low state to 90% of its low state.
+
+Let's calculate all parameters associated from the circuit that we have designed. We will also add an load to the circuit to determine the delay of the signals as the type of load used will also affect the delay of the circuit. We are using an **(0.2pF)** capacitor at the output. Large the load the delay time will also be high.
+
+![inverter_with_CL](https://github.com/user-attachments/assets/1e3392fe-4bd2-4ed4-ac52-baf48fbc3459)
 

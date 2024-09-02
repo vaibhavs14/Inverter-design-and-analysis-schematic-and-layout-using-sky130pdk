@@ -12,6 +12,7 @@ The whole process starts with analysis of NMOS and PMOS devices, specifically th
 ## Contents
 - [1. Analysis of MOSFET models](#2-Analysis-of-MOSFET-models)
 - [2. CMOS Inverter Design and Analysis](#3-CMOS-Inverter-Design-and-Analysis)
+- [3. Layout design].
 
   ## 1. Analysis of MOSFET models
   ### 1.1 General MOS Analysis
@@ -166,4 +167,21 @@ Below are the measurements of the differents parameters of the delay as calculat
 |   tr    | 0.59ns |
 |   tf    | 0.68ns |
 
+Here by some experiments done by us, I have see noticed that:
+- By increasing the vdd of the circuit, there will be improvemnts in the rise and fall times delay. Also if the vdd is increased then the power consumption will also increase due to the quadractic effect of --vdd^2--.
+- The output load also plays a role in the delay time,bigger the load then the delay time will also be high since the power consumpation to charge the larger load will also increase.
+  
 #### 2.4 Power Analysis
+Let's also calculate the average power consumed by the circuit when connected with a load capacitor (0.2pF). We know that the average power is the average of the instantaneous power over one period.
+![instantaneous_power_formula](https://github.com/user-attachments/assets/d686a48f-d8b1-442c-8cf2-466d3f4ec543)
+
+ Below is the calculated value that is obtained from the ngspice:
+
+ ![power_analysis_values](https://github.com/user-attachments/assets/32f87e85-2997-4a65-b80d-d3256d2e230a)
+
+From the data calculated from above we can see that for our circuit with a **PMOS to NMOS** ratio of **3.5:1** the average power drawn is **66.13uA**. 
+Similarlly I have calculated for an capacitive output load (0.1pF) the average power consumption is **(33.70uA)**.
+- Power consumption can be reduced by, reducing the outload load(CL).
+- Reducing the switching activity also reduces the average power consumption.
+
+  ## 3. Layout design

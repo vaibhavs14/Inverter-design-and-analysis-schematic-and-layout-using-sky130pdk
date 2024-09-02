@@ -74,7 +74,7 @@ CMOS Circuits generally consists of a network split into two parts, Upper one re
 
 ![cmos_image](https://github.com/user-attachments/assets/7dd8eb92-9246-4838-bfbd-3ca8a968828f)
 
-### 3.2 CMOS Inverter Analysis Pre-Layout
+### 2.2 CMOS Inverter Analysis Pre-Layout
 
 In electronics an inverter is very popularly explained as something that performs the __NOT__ logic, that is complements the input. So a __HIGH(1.8V)__ becomes __LOW(0V)__ and vice versa. Ideally, the output follows the input and there is no delay or propogation issues of the circuit. But in reality, an inverter can be a real piece of work. It can have serveral isseus like how fast can it react to the changes in the input, how much load can it tolerate before it's output breaks and so many more including noise, bandwidth, etc.
 
@@ -106,6 +106,8 @@ One can solve for them using the equations for individual transistors. There are
 Above five parameters are critical for an Inverter and can be seen on the __VTC__ curve of an inverter. One thing to point out now would be,
 <p align=center><i><b>Vth should be at a value of VDD/2 for maximum noise margins</b></i></p>  
 
+
+
 Let's calculate gain for our circuit. Gain is ratio of the change in output voltage to the change in input voltage **Gain= _d_ Vout/_d_ Vin**. High gain makes the inverter less susceptible to **noise** and helps achieve faster switching times.
 Noise Margin is a measure of a digital circuit's ability to tolerate noise or interference without causing errors in its output. It's essentially the difference between the minimum input voltage required to guarantee a high output and the maximum input voltage that will still produce a low output.
 Here is the plot of of gain when it crosses 1.
@@ -117,3 +119,28 @@ __VOH__ and __VOL__ are easy to determine as they are your aboslute values. In o
 
 And to calculate them, we use ```.meas``` statement with apt instructions. The result is down below.<br>
 ![meas_vil_vih](https://github.com/user-attachments/assets/87997776-2747-4135-ac99-cae3f72dc025)
+
+Let's summarize the values obtained :
+| Voltage | Value |
+|---------|-------|
+| Vth_inv | 0.89V |
+|   VOH   | 1.8V  |
+|   VOL   |  0V   |
+|   VIH   | 1.02V |
+|   VIL   | 0.77V |
+
+The basic defining characteristics of an inverter are done. So we can find a couple more things and then proceed towards the transient analysis. Next is **Noise Margins**. **Noise margins** are defined as the range of values for which the device can work noise free or with high resistance to noise.
+There are two such values of Noise margins for a binary system:<br>
+<b>NML(Noise Margin for Low) - VIL - VOL</b><br>
+<b>NMH(Noise Margin for HIGH) - VOH - VIH</b><br>
+
+So for our calculated values, the device would have, __NML = 0.77V__ and __NML = 0.78V__.
+
+Now, they aren't equal. But if we were to take some more effort to get the values of Vth closet to Vdd/2 (0.9V), then we can get NML = NMH. But for our case they are close enough.
+
+#### 2.3.2 Propagation delay
+
+**Propagation Delay** is the time it takes for a signal to travel from the input of a logic gate to its output. It's a crucial factor in determining the overall speed and performance of a digital circuit.
+
+![propagation_delay](https://github.com/user-attachments/assets/544950c5-9668-4144-a51a-7e06198a7c58)
+

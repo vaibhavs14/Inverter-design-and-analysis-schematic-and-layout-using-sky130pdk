@@ -183,5 +183,10 @@ From the data calculated from above we can see that for our circuit with a **PMO
 Similarlly I have calculated for an capacitive output load (0.1pF) the average power consumption is **(33.70uA)**.
 - Power consumption can be reduced by, reducing the outload load(CL).
 - Reducing the switching activity also reduces the average power consumption.
+---
 
-  ## 3. Layout design
+## 3. Layout design
+We have seen the representation of the inverter in the form of the schematic and analysis of delay and power with help of waveforms and plot measurement data from ngspice in the above section. Now we can represent the same inverter in the form of an layout. Layout design defines the physical arrangement of components and interconnections on the silicon substrate. It's the blueprint that guides the fabrication process. A schematic design alone cannot be directly used to manufacture a chip.
+We have used the layout specification that was avaialble from the open source sky water sky130 PDK too design the layout of our inverter. Here the ratio of the **pmos to nmos** is taken as **2:1** 
+
+![collage9](https://github.com/user-attachments/assets/f7c6f1cb-bfeb-47e7-8dbe-8f78bf001f72)

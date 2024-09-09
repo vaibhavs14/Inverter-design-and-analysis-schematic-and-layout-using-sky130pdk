@@ -12,7 +12,7 @@ The whole process starts with analysis of NMOS and PMOS devices, specifically th
 ## Contents
 - [1. Analysis of MOSFET models](#2-Analysis-of-MOSFET-models)
 - [2. CMOS Inverter Design and Analysis](#3-CMOS-Inverter-Design-and-Analysis)
-- [3. Layout design].
+- [3. Layout design](#3-Layout-design)
 
   ## 1. Analysis of MOSFET models
   ### 1.1 General MOS Analysis

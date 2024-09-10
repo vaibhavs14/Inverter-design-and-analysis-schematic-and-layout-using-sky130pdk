@@ -152,7 +152,7 @@ Now let's calculate the Propagation delay and its associated parameters such as 
 **tf (Fall Time)** is the time it takes for the output of a gate to transition from 90% of its high state to 10% of its high state.  
 **tf (Rise Time)** is the time it takes for the output of a gate to transition from 10% of its low state to 90% of its low state.
 
-Let's calculate all parameters associated from the circuit that we have designed. We will also add an load to the circuit to determine the delay of the signals as the type of load used will also affect the delay of the circuit. We are using an **(0.2pF)** capacitor at the output. Large the load the delay time will also be high.
+Let's calculate all parameters associated from the circuit that we have designed. We will also add an load to the circuit to determine the delay of the signals as the type of load used will also affect the delay of the circuit. We are using an **(0.2pF)** capacitor at the output. Using larger load will also increase the delay time.
 
 ![collage8](https://github.com/user-attachments/assets/f4eb1a51-a288-4db8-aac9-e39dd1d8cca4)
 
@@ -168,7 +168,7 @@ Below are the measurements of the differents parameters of the delay as calculat
 |   tf    | 0.68ns |
 
 Here by some experiments done by us, I have see noticed that:
-- By increasing the vdd of the circuit, there will be improvemnts in the rise and fall times delay. Also if the vdd is increased then the power consumption will also increase due to the quadractic effect of --vdd^2--.
+- By increasing the vdd of the circuit, there will be improvemnts in the rise and fall times delay. Also if the vdd is increased then the power consumption will also increase due to the quadractic effect of **vdd^2**.
 - The output load also plays a role in the delay time,bigger the load then the delay time will also be high since the power consumpation to charge the larger load will also increase.
   
 #### 2.4 Power Analysis

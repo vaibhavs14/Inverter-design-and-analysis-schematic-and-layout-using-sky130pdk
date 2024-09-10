@@ -14,7 +14,7 @@ The whole process starts with analysis of NMOS and PMOS devices, specifically th
 - [2. CMOS Inverter Design and Analysis](#3-CMOS-Inverter-Design-and-Analysis)
 - [3. Layout design](#3-Layout-design)
 
-  ## 1. Analysis of MOSFET models
+## 1. Analysis of MOSFET models
   ### 1.1 General MOS Analysis
 In this section I start with the analysis of MOSFET models present in sky130 pdk. I am using the 1.8v transistor models to experiment among many other ones present there. Below is the schematic I created in Xschem.
 

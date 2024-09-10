@@ -99,10 +99,10 @@ A voltage transfer characteristics paints a plot that shows the behavior of a de
 One can solve for them using the equations for individual transistors. There are important parameters of this device that are based off it's VTC curve.
 - __VOH__ - Maximum output voltage when it is logic _'1'_.
 - __VOL__ - Minimun output voltage when it is logic _'0'_.
-- __VIH__ - Maximum input voltage that can be interpreted as logic _'0'_.
-- __VIL__ - Minimum input voltage that can be interpreted as logic _'1'_.
+- __VIH__ - Minimum input voltage that can be interpreted as logic _'1'_.
+- __VIL__ - Maximum input voltage that can be interpreted as logic _'0'_.
 - __Vth__ - Inverter Threshold voltage
-- __Vm__ - Swithcing Threshold
+- __Vm__ - Switching Threshold
 
 Above five parameters are critical for an Inverter and can be seen on the __VTC__ curve of an inverter. One thing to point out now would be,
 <p align=center><i><b>Vth should be at a value of VDD/2 for maximum noise margins</b></i></p>  
@@ -111,7 +111,7 @@ Above five parameters are critical for an Inverter and can be seen on the __VTC_
 
 Let's calculate gain for our circuit. Gain is ratio of the change in output voltage to the change in input voltage **Gain= _d_ Vout/_d_ Vin**. High gain makes the inverter less susceptible to **noise** and helps achieve faster switching times.
 Noise Margin is a measure of a digital circuit's ability to tolerate noise or interference without causing errors in its output. It's essentially the difference between the minimum input voltage required to guarantee a high output and the maximum input voltage that will still produce a low output.
-Here is the plot of of gain when it crosses 1.
+Here is the plot of gain when it crosses 1.
 ![gain](https://github.com/user-attachments/assets/18234c32-1e76-4009-8f4c-d3a79d9ef9d2)
 
 __VOH__ and __VOL__ are easy to determine as they are your aboslute values. In our case it is __1.8V__ and __0V__ respectively. For __Vih__ and __Vil__, we have another method. At __Vin__ = __VIH__, NMOS is in Saturation region and PMOS in Linear; while when __Vin__ = __VIL__, NMOS is in Linear and PMOS in Saturation. Another interesting thing about these points is that, _these are the points on the curve, when the magnitude of slope = 1_. So we can use ```measure``` commands to find them on the plot. In the plot shown below, look at the points that are at the intersection of the vout curve and the blue vertical line. These are our __VIH__ and __VIL__.<br>
@@ -132,8 +132,8 @@ Let's summarize the values obtained :
 
 The basic defining characteristics of an inverter are done. So we can find a couple more things and then proceed towards the transient analysis. Next is **Noise Margins**. **Noise margins** are defined as the range of values for which the device can work noise free or with high resistance to noise.
 There are two such values of Noise margins for a binary system:<br>
-<b>NML(Noise Margin for Low) - VIL - VOL</b><br>
-<b>NMH(Noise Margin for HIGH) - VOH - VIH</b><br>
+<b>NML(Noise Margin for Low) = VIL - VOL</b><br>
+<b>NMH(Noise Margin for HIGH) = VOH - VIH</b><br>
 
 So for our calculated values, the device would have, __NML = 0.77V__ and __NML = 0.78V__.
 
@@ -149,7 +149,7 @@ Now let's calculate the Propagation delay and its associated parameters such as 
 
 **tpLH (Propagation Delay from Low to High)** is the time taken for the output of a gate to transition from a low state to a high state after a change in input from high to low. It can be measured from 50% of the input falling signal to the 50% of the output rising signal.
 
-**tf (Fall Time)** is the time it takes for the output of a gate to transition from 90% of its high state to 10% of its high state. 
+**tf (Fall Time)** is the time it takes for the output of a gate to transition from 90% of its high state to 10% of its high state.  
 **tf (Rise Time)** is the time it takes for the output of a gate to transition from 10% of its low state to 90% of its low state.
 
 Let's calculate all parameters associated from the circuit that we have designed. We will also add an load to the circuit to determine the delay of the signals as the type of load used will also affect the delay of the circuit. We are using an **(0.2pF)** capacitor at the output. Large the load the delay time will also be high.

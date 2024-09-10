@@ -62,7 +62,7 @@ Again, some plots will clear the idea<br><br>
 
 The reasoning is the same as the previous section<br><br>
 
----Hence, neither NMOS nor PMOS would make a great inverter on their own. So a plethora of configurations were taken into account, but at the last, only one stands as the most popular format of circuit design using mosfets. It is referred to as a CMOS configuration___
+Hence, neither NMOS nor PMOS would make a great inverter on their own. So a plethora of configurations were taken into account, but at the last, only one stands as the most popular format of circuit design using mosfets. It is referred to as a CMOS configuration.
 
 ---
 
@@ -79,7 +79,7 @@ CMOS Circuits generally consists of a network split into two parts, Upper one re
 
 In electronics an inverter is very popularly explained as something that performs the __NOT__ logic, that is complements the input. So a __HIGH(1.8V)__ becomes __LOW(0V)__ and vice versa. Ideally, the output follows the input and there is no delay or propogation issues of the circuit. But in reality, an inverter can be a real piece of work. It can have serveral isseus like how fast can it react to the changes in the input, how much load can it tolerate before it's output breaks and so many more including noise, bandwidth, etc.
 
-All these parameters are what will affect the operation of transistor in general. Hence, with inverter many like to explore them all. I first start with a schematic diagram, then I evaluate all the parameters, that is, measuring them, experimentin with them and reaching a conclusive value and Finally reach a schematic circuit that is capable of things we lay down at the beginning.
+All these parameters are what will affect the operation of transistor in general. Hence, with inverter many like to explore them all. I first start with a schematic diagram, then I evaluate all the parameters, that is, measuring them, experimenting with them and reaching a conclusive value and Finally reach a schematic circuit that is capable of things we lay down at the beginning.
 
 So I designed a Schematic of the Inverter, where the whole thing is based on what we determined earlier. I have chosen __(W/L) of PMOS = 3.5 times (W/L) of NMOS__ and __(W/L) of NMOS is 1/0.15 in microns__. I also designed a symbol of it, so that we can utilise that for further schematic creation.<br><br>
 

@@ -13,6 +13,7 @@ The whole process starts with analysis of NMOS and PMOS devices, specifically th
 - [1. Analysis of MOSFET models](#2-Analysis-of-MOSFET-models)
 - [2. CMOS Inverter Design and Analysis](#3-CMOS-Inverter-Design-and-Analysis)
 - [3. Layout design](#3-Layout-design)
+- [4. Layout versus schematic](#4-Layout-versus-schematic)
 
 ## 1. Analysis of MOSFET models
    ### 1.1 General MOS Analysis
@@ -190,3 +191,24 @@ We have seen the representation of the inverter in the form of the schematic and
 We have used the layout specification that was avaialble from the open source sky water sky130 PDK too design the layout of our inverter. Here the ratio of the **pmos to nmos** is taken as **2:1**. Open source tool **magic** is used as layout editor to create our layout reprsentation of inverter.
 
 ![collage9](https://github.com/user-attachments/assets/f7c6f1cb-bfeb-47e7-8dbe-8f78bf001f72)
+
+## 4. Layout versus schematic
+So far, in our above sections we have discussed about and represented the CMOS inverter in both schematic and layout forms, ensuring a thorough understanding of each representation. The schematic provides a high-level overview of the circuit’s functionality, while the layout translates this functionality into a physical form that can be fabricated on a silicon wafer. By breifly explaining each representation, we have laid a solid foundation for the next step in our design process: **the Layout Versus Schematic (LVS)** check. Now, we advance to the next crucial step: performing a **Layout Versus Schematic (LVS)** check. As informed in the beggining this project will conclude with the performing a LVS check. This section will elaborate the significance of LVS in VLSI design and detail the process of conducting an LVS check for our CMOS inverter.
+
+The LVS check is a critical step in the VLSI design process, ensuring that the layout accurately reflects the schematic. In essence, LVS is a verification process that compares the netlist extracted from the layout with the netlist derived from the schematic. The goal is to confirm that the physical layout accurately represents the schematic, verifying that all connections and components are correctly implemented. 
+
+LVS helps identify discrepancies between the schematic and layout, such as missing connections, incorrect component placements, or unintended shorts and opens. By confirming that the layout matches the schematic, the design is ready for fabrication, minimizing the risk of costly errors during the manufacturing process. LVS provides valuable feedback that can be used to optimize the design, improving performance, reliability, and yield.
+
+The first step in the LVS check for the design is by extracting both the netlists of the schematic and the layout and comparing them with the help of tool. A **netlist** is a textual representation of a circuit. It describes the interconnection between components, such as transistors, gates, and other electrical elements. Each component in the netlist is assigned a unique identifier, and the connections between components are specified using net names. For our case i'm using a open source **Netgen** to compare both the netlists. 
+
+Below if the the netlist that is extracted from the schematic of inverter in the format of spice file:
+![xschem_netlist](https://github.com/user-attachments/assets/105f43e4-c5f8-4bb9-9481-d4d2b2a3aba9)
+
+The netlist of the layout is also shown below:
+![layout_netlist](https://github.com/user-attachments/assets/d929feb3-2a70-4382-b3d0-e82717940422)
+
+Now both the netlists can be compared with each other from the **Netgen** tkcon window. use the command ```lvs``` <filename.spice> <filename.spice>. 
+After the tool runs the command you can get to see the result in a tkcon window like shown below:
+![lvs_result](https://github.com/user-attachments/assets/8810d7fd-6810-4184-b105-f29d6c122ef9)
+
+

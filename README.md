@@ -211,4 +211,9 @@ Now both the netlists can be compared with each other from the **Netgen** tkcon 
 After the tool runs the command you can get to see the result in a tkcon window like shown below:
 ![lvs_result](https://github.com/user-attachments/assets/8810d7fd-6810-4184-b105-f29d6c122ef9)
 
+You can see from the above results which shows the number of devices that our schematic and layout design contains; and also the number of total wires our design has. 
+If both netlits matchs, then the final output shows as: **Circuits match uniquely**. 
+This final output results will be dumped into a single file namesd "comp.out". We can use a editor tool to view this file. The "comp.out" file contains a side by side comparison between both the netlist which is shown below:
+![comp_out_result](https://github.com/user-attachments/assets/16993ff0-b5f9-4a63-accb-6104ca99b540)
 
+In this project, we have comprehensively analyzed the MOSFET models and the CMOS inverter. We represented the CMOS inverter in both schematic and layout forms, providing detailed explanations for each. Finally we performed a Layout Versus Schematic (LVS) check to ensure the accuracy and integrity of our design. With these steps completed, I conclude this project.

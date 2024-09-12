@@ -202,7 +202,7 @@ The **LVS** check is a critical step in the VLSI design process, ensuring that t
 **Netlist:**
 The first step in the **LVS** check for the design is by extracting both the netlists of the schematic and the layout and comparing them with the help of tool. A **netlist** is a textual representation of a circuit. It describes the interconnection between components, such as transistors, gates, and other electrical elements. Each component in the netlist is assigned a unique identifier, and the connections between components are specified using net names. For our case i'm using a open source **Netgen** to compare both the netlists. 
 
-Below if the the netlist that is extracted from the schematic of inverter in the format of spice file:
+Below if the netlist that is extracted from the schematic of inverter in the format of spice file:
 
 ![xschem_netlist](https://github.com/user-attachments/assets/105f43e4-c5f8-4bb9-9481-d4d2b2a3aba9)
 

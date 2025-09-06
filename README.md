@@ -98,8 +98,8 @@ A voltage transfer characteristics paints a plot that shows the behavior of a de
 ![inverter-operating-regions](https://github.com/user-attachments/assets/452c2e50-32f0-4867-b923-a8dc34be2641)
 
 One can solve for them using the equations for individual transistors. There are important parameters of this device that are based off it's VTC curve.
-- __VOH__ - Maximum output voltage when it is logic _'1'_.
-- __VOL__ - Minimun output voltage when it is logic _'0'_.
+- __VOH__ - Minumum output voltage when it is logic _'1'_.
+- __VOL__ - Maximum output voltage when it is logic _'0'_.
 - __VIH__ - Minimum input voltage that can be interpreted as logic _'1'_.
 - __VIL__ - Maximum input voltage that can be interpreted as logic _'0'_.
 - __Vth__ - Inverter Threshold voltage
